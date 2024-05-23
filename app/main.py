@@ -46,10 +46,9 @@ async def main() -> None:
 
     # run the programs
 
-    await run_sequence(service.run_program([Message(hue_light_id, MessageType.SWITCH_ON)]),
-                       service.run_program([Message(speaker_id, MessageType.SWITCH_ON)]), service.run_program(
-            [Message(speaker_id, MessageType.PLAY_SONG, "Rick Astley - Never Gonna Give You Up")]))
+    await service.run_program(wake_up_program),
     await service.run_program(sleep_program)
+
 
 if __name__ == "__main__":
     start = time.perf_counter()
