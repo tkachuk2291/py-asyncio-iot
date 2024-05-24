@@ -1,6 +1,4 @@
 import asyncio
-import time
-
 from .message import MessageType
 
 
